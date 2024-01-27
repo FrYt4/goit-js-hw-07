@@ -30,7 +30,7 @@ const onContainerClick = (x) => {
     x.preventDefault();
 
 
-  const source = e.target.dataset.source;
+  const source = x.target.dataset.source;
     if (!source) return;
 const instance = basicLightbox.create(`
     <img src="${source}"width="800" height="600">`);
