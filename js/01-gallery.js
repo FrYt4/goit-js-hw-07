@@ -4,8 +4,8 @@ import { galleryItems } from './gallery-items.js';
 console.log(galleryItems);
 
 const galleryContainer = document.querySelector(".gallery");
-const imagesEl = createGalleryImg(galleryItems);
-galleryContainer.insertAdjacentHTML("beforeend", imagesEl);
+const images = createGalleryImg(galleryItems);
+galleryContainer.insertAdjacentHTML("beforeend", images);
 
 
 function createGalleryImg(item) {
