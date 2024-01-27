@@ -22,7 +22,7 @@ function createGalleryImg(item) {
 
 }
 
-const lightbox = new SimpleLightbox('.gallery', {  
+const lightbox = new SimpleLightbox('.gallery a', {  
 captionsData: "alt",
 captionType: "alt",
 captionDelay: 250,
