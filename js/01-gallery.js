@@ -5,7 +5,7 @@ console.log(galleryItems);
 
 const galleryContainer = document.querySelector(".gallery");
 const images = createGalleryImg(galleryItems);
-//galleryContainer.insertAdjacentHTML("beforeend", images);
+galleryContainer.insertAdjacentHTML("beforeend", images);
 
 
 function createGalleryImg(item) {
