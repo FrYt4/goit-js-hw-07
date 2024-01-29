@@ -32,21 +32,23 @@ const onContainerClick = (x) => {
 if(x.target.nodeName !== `IMG`){
   return ;
 }
-  
+const source = event.target.dataset.source
 const instance = basicLightbox.create(`
-    <img src="${source}"width="800" height="600">`);
-onShow: () => {
-  window.addEventListener(`keydown` , onKeydownEsc);
-};
-onClose: () => {
-  window.removeEventListener(`keydown`, onKeydownEsc);
-}
+    <img src="${source}" width="800" height="600">`, {
+        onShow: () => {
+            window.addEventListener('keydown', onKeydownEsc);
+        },
+        onClose: () => {
+            window.removeEventListener('keydown', onKeydownEsc);
+        }
+    });
 
-const onKeydownEsc = event => {
-  console.log(event.code);
-  if (event.code === 'Escape') {
-    instance.close();
-  }
+const onKeydownEsc = (event) => {
+    console.log(event.code);
+    if (event.code === 'Escape') {
+        instance.close();
+    }
 };
+
 instance.show();
 }
