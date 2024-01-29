@@ -26,8 +26,8 @@ function createGalleryImg(item) {
 };
 
 
-const onContainerClick = (x) => {
-    x.preventDefault();
+const onContainerClick = (event) => {
+    event.preventDefault();
 
 if(x.target.nodeName !== `IMG`){
   return ;
